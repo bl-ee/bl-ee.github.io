@@ -54,7 +54,9 @@ body {
   }
 
   .profile-photo {
-    display: none;
+    order: -1;
+    justify-self: center;
+    margin-bottom: 0.5rem;
   }
 }
 
