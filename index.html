@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Brian W. Lee</title>
-  <link rel="stylesheet" href="style.css?v=20260525-3">
+  <link rel="stylesheet" href="style.css?v=20260525-4">
 </head>
 <body>
   <main class="page">
@@ -56,24 +56,5 @@
       </article>
     </section>
   </main>
-  <script>
-    const syncProfilePhotoHeight = () => {
-      const introBody = document.querySelector(".intro-body");
-      const photo = document.querySelector(".profile-photo");
-
-      if (!introBody || !photo) return;
-
-      if (window.matchMedia("(max-width: 700px)").matches) {
-        photo.style.height = "auto";
-        return;
-      }
-
-      photo.style.height = `${Math.round(introBody.getBoundingClientRect().height)}px`;
-    };
-
-    window.addEventListener("load", syncProfilePhotoHeight);
-    window.addEventListener("resize", syncProfilePhotoHeight);
-    document.fonts?.ready.then(syncProfilePhotoHeight);
-  </script>
 </body>
 </html>
