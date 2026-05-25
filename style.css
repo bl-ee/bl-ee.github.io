@@ -29,7 +29,7 @@ body {
 
 .intro {
   display: grid;
-  grid-template-columns: auto minmax(18rem, 1fr);
+  grid-template-columns: minmax(18rem, 1fr) auto;
   gap: 2rem;
   align-items: center;
   margin-bottom: 0.5rem;
