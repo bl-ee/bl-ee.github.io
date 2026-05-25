@@ -2,7 +2,7 @@
   --text: #202124;
   --muted: #5f6368;
   --link: #1a73e8;
-  --max-width: 42rem;
+  --max-width: 48rem;
 }
 
 * {
@@ -24,10 +24,32 @@ body {
   padding: 3rem 1.25rem 4rem;
 }
 
-.site-title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin: 0 0 2rem;
+.intro {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.profile-photo {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.intro-body {
+  flex: 1;
+  min-width: 0;
+}
+
+@media (max-width: 600px) {
+  .intro {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 h1 {
