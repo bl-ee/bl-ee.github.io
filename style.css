@@ -1,0 +1,78 @@
+:root {
+  --text: #202124;
+  --muted: #5f6368;
+  --link: #1a73e8;
+  --max-width: 42rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text);
+  background: #fff;
+}
+
+.page {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 3rem 1.25rem 4rem;
+}
+
+.site-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 2rem;
+}
+
+h1 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 0 0 1rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 2.5rem 0 0.75rem;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.contact {
+  margin-top: 1.25rem;
+}
+
+.note {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin: 0 0 1.25rem;
+}
+
+.paper {
+  margin-bottom: 1.5rem;
+}
+
+.paper .title {
+  font-weight: 600;
+  margin: 0 0 0.25rem;
+  color: var(--text);
+}
+
+.paper .authors,
+.paper .venue {
+  margin: 0;
+  color: var(--muted);
+}
