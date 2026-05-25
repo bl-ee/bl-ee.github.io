@@ -3,6 +3,9 @@
   --muted: #5f6368;
   --link: #1a73e8;
   --max-width: 65rem;
+  --profile-photo-max: 260px;
+  --profile-photo-min: 180px;
+  --profile-photo-vw: 24vw;
 }
 
 * {
@@ -28,12 +31,12 @@ body {
   display: grid;
   grid-template-columns: auto minmax(18rem, 1fr);
   gap: 2rem;
-  align-items: start;
+  align-items: center;
   margin-bottom: 0.5rem;
 }
 
 .profile-photo {
-  width: clamp(160px, 22vw, 220px);
+  width: clamp(var(--profile-photo-min), var(--profile-photo-vw), var(--profile-photo-max));
   height: auto;
   max-width: 100%;
   border-radius: 4px;
