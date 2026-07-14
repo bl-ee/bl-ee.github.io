@@ -1,0 +1,49 @@
+---
+pagetitle: "Brian W. Lee"
+page-layout: custom
+toc: false
+---
+
+```{=html}
+<div class="home-page">
+  <header class="intro">
+    <div class="intro-body">
+      <h1>Brian W. Lee</h1>
+
+      <p>
+        I am a PhD student at <a href="https://bair.berkeley.edu/">BAIR</a>, where I am lucky to work with
+        <a href="https://www.cs.berkeley.edu/~nika/">Nika Haghtalab</a> and
+        <a href="https://people.eecs.berkeley.edu/~jordan/">Mike Jordan</a>.
+        I like machine learning theory and the foundations of probability.
+        Before Berkeley, I did my BS and MS at Penn, where I had the privilege of working with
+        <a href="https://nikolaimatni.github.io/">Nik Matni</a>.
+      </p>
+
+      <p class="contact">
+        Email: bl.ee AT berkeley DOT edu
+      </p>
+
+      <p>
+        I help organize the CLIMB seminar. Please reach out if you'd like to give a talk!
+      </p>
+
+      <p class="technical-notes-link">
+        <a href="/notes/">Technical Notes</a>
+      </p>
+    </div>
+
+    <img src="images/profile.jpg" alt="Brian W. Lee" class="profile-photo" width="917" height="1024">
+  </header>
+
+  <section id="research">
+    <h2>Research</h2>
+
+    <article class="paper">
+      <p class="title">Blackwell Approachability and Gradient Equilibrium are Equivalent</p>
+      <p class="authors"> <strong>BWL</strong>, Nika Haghtalab, Michael I. Jordan, and Ryan J. Tibshirani</p>
+      <p class="venue">COLT 2026</p>
+    </article>
+
+  </section>
+</div>
+```

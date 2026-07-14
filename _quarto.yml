@@ -1,0 +1,38 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Brian W. Lee"
+  site-url: "https://bl-ee.github.io"
+  description: "Brian W. Lee's research homepage and technical notes."
+
+  navbar:
+    title: false
+    background: white
+    foreground: "#202124"
+    left:
+      - href: index.qmd
+        text: "Brian W. Lee"
+      - href: notes/index.qmd
+        text: "Technical Notes"
+
+  search: false
+  open-graph: true
+
+format:
+  html:
+    theme: cosmo
+    css: style.css
+    html-math-method: mathjax
+    toc: true
+    toc-depth: 3
+    title-block-style: plain
+    anchor-sections: true
+    code-copy: true
+    code-overflow: wrap
+    grid:
+      body-width: 800px
+
+execute:
+  freeze: auto

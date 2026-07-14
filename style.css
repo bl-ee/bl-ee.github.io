@@ -21,13 +21,13 @@ body {
   background: #fff;
 }
 
-.page {
+.home-page {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 3rem 1.25rem 4rem;
 }
 
-.intro {
+.home-page .intro {
   display: grid;
   grid-template-columns: minmax(18rem, 1fr) auto;
   gap: 2rem;
@@ -35,7 +35,7 @@ body {
   margin-bottom: 0.5rem;
 }
 
-.profile-photo {
+.home-page .profile-photo {
   width: clamp(var(--profile-photo-min), var(--profile-photo-vw), var(--profile-photo-max));
   height: auto;
   max-width: 100%;
@@ -43,30 +43,30 @@ body {
   display: block;
 }
 
-.intro-body {
+.home-page .intro-body {
   min-width: min(100%, 18rem);
 }
 
 @media (max-width: 900px) {
-  .intro {
+  .home-page .intro {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
 
-  .profile-photo {
+  .home-page .profile-photo {
     order: -1;
     justify-self: center;
     margin-bottom: 0.5rem;
   }
 }
 
-h1 {
+.home-page h1 {
   font-size: 2.25rem;
   font-weight: 600;
   margin: 0 0 1rem;
 }
 
-h2 {
+.home-page h2 {
   font-size: 1.25rem;
   font-weight: 600;
   margin: 2.5rem 0 0.75rem;
@@ -81,33 +81,110 @@ a:hover {
   text-decoration: underline;
 }
 
-.contact {
+.home-page .contact {
   margin-top: 1.25rem;
 }
 
-.note {
+.home-page .note {
   font-size: 0.9rem;
   color: var(--muted);
   margin: 0 0 1.25rem;
 }
 
-.paper {
+.home-page .paper {
   margin-bottom: 1.5rem;
 }
 
-.paper .title {
+.home-page .paper .title {
   font-weight: 600;
   margin: 0 0 0.25rem;
   color: var(--text);
 }
 
-.paper .authors,
-.paper .venue {
+.home-page .paper .authors,
+.home-page .paper .venue {
   margin: 0;
   color: var(--muted);
 }
 
-.paper .authors strong {
+.home-page .paper .authors strong {
   font-weight: 600;
   color: var(--text);
+}
+
+/* Quarto shell */
+
+:root {
+  --bs-body-color: var(--text);
+  --bs-body-font-family: system-ui, -apple-system, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+  --bs-link-color: var(--link);
+}
+
+.navbar {
+  border-bottom: 1px solid #e8eaed;
+  box-shadow: none;
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+/* The homepage uses page-layout: custom; its wrapper controls the width. */
+.page-layout-custom main.content {
+  max-width: none;
+  padding: 0;
+}
+
+/* Technical notes */
+.quarto-title-block {
+  margin-bottom: 2.5rem;
+}
+
+.quarto-title .title {
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+main.content {
+  line-height: 1.7;
+}
+
+main.content p {
+  margin-bottom: 1.15rem;
+}
+
+main.content h2 {
+  margin-top: 2.75rem;
+}
+
+/* Wide equations must not break mobile layouts. */
+mjx-container[display="true"] {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.25rem 0;
+}
+
+/* Compact notes archive. */
+.quarto-listing-table td {
+  vertical-align: top;
+}
+
+.quarto-listing-table td:first-child {
+  white-space: nowrap;
+}
+
+pre {
+  border-radius: 4px;
+}
+
+@media print {
+  .navbar,
+  .toc-actions,
+  #quarto-margin-sidebar {
+    display: none !important;
+  }
 }

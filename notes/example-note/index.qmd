@@ -1,0 +1,56 @@
+---
+title: "Example Technical Note"
+description: "An unpublished template used to verify Quarto math, cross-references, and theorem rendering."
+date: 2026-07-14
+draft: true
+---
+
+{{< include /_macros.qmd >}}
+
+## Setup
+
+Let $X_1,\ldots,X_n$ be independent random variables satisfying
+$\E[X_i]=0$ and $\E[X_i^2]<\infty$. Define
+
+$$
+S_n = \sum_{i=1}^n X_i.
+$$ {#eq-partial-sum}
+
+::: {#thm-variance-additivity}
+
+## Variance additivity
+
+Under the assumptions above,
+
+$$
+\E[S_n^2] = \sum_{i=1}^n \E[X_i^2].
+$$ {#eq-variance-additivity}
+
+:::
+
+::: {.proof}
+
+Expanding the square gives
+
+$$
+\begin{aligned}
+\E[S_n^2]
+&= \E\left[\left(\sum_{i=1}^n X_i\right)^2\right] \\
+&= \sum_{i=1}^n \E[X_i^2]
+ + 2\sum_{1 \le i < j \le n}\E[X_iX_j].
+\end{aligned}
+$$ {#eq-square-expansion}
+
+For $i\ne j$, independence and centering imply
+$\E[X_iX_j]=\E[X_i]\E[X_j]=0$. Substituting into
+@eq-square-expansion proves @thm-variance-additivity.
+
+:::
+
+By @eq-variance-additivity and Chebyshev's inequality, for every $t>0$,
+
+$$
+\Prob\!\left(\abs{S_n}\ge t\right)
+\le
+\frac{\sum_{i=1}^n \E[X_i^2]}{t^2}.
+$$ {#eq-chebyshev}
