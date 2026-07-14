@@ -1,18 +1,10 @@
 ---
-title: "Technical Notes"
-description: "Notes on machine learning theory, probability, statistics, and related topics."
+title: "Notes"
+body-classes: notes-index
 toc: false
 listing:
   contents: "*/index.qmd"
-  type: table
+  template: "_listing.ejs.md"
   sort: "date desc"
-  fields: [date, title, description]
-  date-format: "yyyy-MM-dd"
-  sort-ui: false
-  filter-ui: false
-  table-striped: false
-  table-hover: false
   feed: true
 ---
-
-These are informal technical notes, written primarily to work through ideas in machine learning theory, probability, statistics, and adjacent areas. Corrections and comments are welcome.

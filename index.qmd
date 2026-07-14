@@ -26,10 +26,6 @@ toc: false
       <p>
         I help organize the CLIMB seminar. Please reach out if you'd like to give a talk!
       </p>
-
-      <p class="technical-notes-link">
-        <a href="/notes/">Technical Notes</a>
-      </p>
     </div>
 
     <img src="images/profile.jpg" alt="Brian W. Lee" class="profile-photo" width="917" height="1024">
@@ -40,8 +36,11 @@ toc: false
 
     <article class="paper">
       <p class="title">Blackwell Approachability and Gradient Equilibrium are Equivalent</p>
-      <p class="authors"> <strong>BWL</strong>, Nika Haghtalab, Michael I. Jordan, and Ryan J. Tibshirani</p>
-      <p class="venue">COLT 2026</p>
+      <p class="authors"><strong>Brian W. Lee</strong>, Nika Haghtalab, Michael I. Jordan, and Ryan J. Tibshirani</p>
+      <p class="venue">
+        COLT 2026 · <a href="https://arxiv.org/abs/2606.27315">arXiv</a> ·
+        <a href="https://proceedings.mlr.press/v336/lee26c.html">Extended abstract</a>
+      </p>
     </article>
 
   </section>

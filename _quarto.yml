@@ -5,7 +5,7 @@ project:
 website:
   title: "Brian W. Lee"
   site-url: "https://bl-ee.github.io"
-  description: "Brian W. Lee's research homepage and technical notes."
+  description: "Brian W. Lee's research homepage and notes."
 
   navbar:
     title: false
@@ -15,7 +15,7 @@ website:
       - href: index.qmd
         text: "Brian W. Lee"
       - href: notes/index.qmd
-        text: "Technical Notes"
+        text: "Notes"
 
   search: false
   open-graph: true
@@ -32,7 +32,7 @@ format:
     code-copy: true
     code-overflow: wrap
     grid:
-      body-width: 800px
+      body-width: 700px
 
 execute:
   freeze: auto

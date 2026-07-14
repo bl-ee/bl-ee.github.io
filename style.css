@@ -2,7 +2,7 @@
   --text: #202124;
   --muted: #5f6368;
   --link: #1a73e8;
-  --max-width: 65rem;
+  --max-width: 48rem;
   --profile-photo-max: 300px;
   --profile-photo-min: 280px;
   --profile-photo-vw: 24vw;
@@ -14,7 +14,7 @@
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: "Times New Roman", Times, serif;
   font-size: 1rem;
   line-height: 1.6;
   color: var(--text);
@@ -116,14 +116,18 @@ a:hover {
 
 :root {
   --bs-body-color: var(--text);
-  --bs-body-font-family: system-ui, -apple-system, "Segoe UI", Roboto,
-    Helvetica, Arial, sans-serif;
+  --bs-body-font-family: "Times New Roman", Times, serif;
   --bs-link-color: var(--link);
 }
 
 .navbar {
   border-bottom: 1px solid #e8eaed;
   box-shadow: none;
+}
+
+.navbar-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
 }
 
 .navbar-brand,
@@ -160,6 +164,13 @@ main.content h2 {
   margin-top: 2.75rem;
 }
 
+code,
+kbd,
+pre,
+samp {
+  font-family: var(--bs-font-monospace);
+}
+
 /* Wide equations must not break mobile layouts. */
 mjx-container[display="true"] {
   max-width: 100%;
@@ -168,13 +179,32 @@ mjx-container[display="true"] {
   padding: 0.25rem 0;
 }
 
-/* Compact notes archive. */
-.quarto-listing-table td {
-  vertical-align: top;
+/* Notes archive. */
+.notes-year {
+  margin: 2rem 0 0.5rem;
+  font-size: 1.35rem;
+  font-weight: 600;
 }
 
-.quarto-listing-table td:first-child {
-  white-space: nowrap;
+.notes-index .quarto-title-meta {
+  display: none;
+}
+
+.notes-list {
+  margin: 0 0 1.5rem;
+  padding-left: 1.25rem;
+}
+
+.notes-list li {
+  margin: 0.2rem 0;
+}
+
+.note-date {
+  font-variant-numeric: tabular-nums;
+}
+
+.listing-no-matching {
+  display: none !important;
 }
 
 pre {

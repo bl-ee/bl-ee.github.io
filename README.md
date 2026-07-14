@@ -1,6 +1,6 @@
 # bl-ee.github.io
 
-Brian W. Lee's research homepage and technical notes, built with
+Brian W. Lee's research homepage and notes, built with
 [Quarto](https://quarto.org/).
 
 ## Local development
