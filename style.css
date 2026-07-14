@@ -39,7 +39,7 @@ body {
 .home-page {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 6rem 1rem 4rem;
+  padding: calc(14px + 1.75rem) 1rem 4rem;
 }
 
 .home-page .intro {

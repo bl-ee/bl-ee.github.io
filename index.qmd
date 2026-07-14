@@ -20,10 +20,6 @@ toc: false
       <p class="contact">
         Email: bl.ee AT berkeley DOT edu
       </p>
-
-      <p>
-        I help organize the CLIMB seminar. Please reach out if you'd like to give a talk!
-      </p>
     </div>
 
     <img src="images/profile.jpg" alt="Brian W. Lee" class="profile-photo" width="917" height="1024">
