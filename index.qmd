@@ -29,8 +29,6 @@ toc: false
     <img src="images/profile.jpg" alt="Brian W. Lee" class="profile-photo" width="917" height="1024">
   </header>
 
-  <hr class="home-rule">
-
   <section id="research">
     <h2>Research</h2>
 

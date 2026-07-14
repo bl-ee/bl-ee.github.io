@@ -19,6 +19,7 @@
 
 html {
   font-family: "Times New Roman", Times, serif;
+  font-size: 0.95rem;
   font-kerning: normal;
   font-variant-ligatures: common-ligatures contextual;
 }
@@ -26,7 +27,7 @@ html {
 body {
   margin: 0;
   font-family: inherit;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
   color: var(--text);
@@ -91,12 +92,6 @@ a:focus {
   font-size: 0.9rem;
 }
 
-.home-rule {
-  margin: 2rem 0 1.5rem;
-  border: 0;
-  border-top: 1px solid var(--rule);
-}
-
 .home-page .paper {
   margin-bottom: 1.1rem;
 }
@@ -123,7 +118,7 @@ a:focus {
 .navbar {
   min-height: auto;
   padding: 0.65rem 0;
-  border-bottom: 1px solid var(--rule);
+  border: 0;
   box-shadow: none;
   background: #ffffff;
 }
@@ -138,7 +133,7 @@ a:focus {
 
 .navbar-brand {
   color: var(--link);
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 700;
 }
 
@@ -152,7 +147,7 @@ a:focus {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   color: var(--link);
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 400;
 }
 
@@ -176,6 +171,7 @@ main.content h2,
 main.content h3,
 .notes-year {
   color: var(--heading);
+  border-bottom: 0;
   font-weight: 400;
   line-height: 1.25;
   letter-spacing: -0.025rem;
@@ -184,6 +180,10 @@ main.content h3,
 
 .quarto-title-block {
   margin-bottom: 2rem;
+}
+
+.quarto-title-meta {
+  display: none;
 }
 
 .quarto-title .title {
@@ -249,6 +249,10 @@ mjx-container[display="true"] {
 
 .listing-no-matching {
   display: none !important;
+}
+
+hr {
+  display: none;
 }
 
 pre {

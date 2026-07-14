@@ -12,8 +12,6 @@ website:
     background: white
     foreground: "#777777"
     right:
-      - href: index.qmd#research
-        text: "Research"
       - href: notes/index.qmd
         text: "Notes"
 
