@@ -6,6 +6,7 @@
   --rule: #eeeeee;
   --max-width: 40rem;
   --profile-photo-size: 12.5rem;
+  --page-top-gap: 2.75rem;
 
   --bs-body-color: var(--text);
   --bs-body-font-family: "Times New Roman", Times, serif;
@@ -39,7 +40,7 @@ body {
 .home-page {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: calc(14px + 1.75rem) 1rem 4rem;
+  padding: 0 1rem 4rem;
 }
 
 .home-page .intro {
@@ -196,6 +197,10 @@ a:focus {
   padding: 0;
 }
 
+#quarto-content > main.content {
+  padding-top: var(--page-top-gap);
+}
+
 /* Technical notes */
 .home-page h2,
 .quarto-title .title,
@@ -264,6 +269,10 @@ mjx-container[display="true"] {
 .notes-year {
   margin: 1.75rem 0 0.5rem;
   font-size: 1.2rem;
+}
+
+.notes-index .notes-year:first-of-type {
+  margin-top: 0;
 }
 
 .notes-index .quarto-title-block {
