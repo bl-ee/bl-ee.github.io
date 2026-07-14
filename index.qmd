@@ -8,8 +8,6 @@ toc: false
 <div class="home-page">
   <header class="intro">
     <div class="intro-body">
-      <h1>Brian W. Lee</h1>
-
       <p>
         I am a PhD student at <a href="https://bair.berkeley.edu/">BAIR</a>, where I am lucky to work with
         <a href="https://www.cs.berkeley.edu/~nika/">Nika Haghtalab</a> and

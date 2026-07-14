@@ -8,12 +8,10 @@ website:
   description: "Brian W. Lee's research homepage and notes."
 
   navbar:
-    title: false
+    title: "Brian W. Lee"
     background: white
     foreground: "#202124"
-    left:
-      - href: index.qmd
-        text: "Brian W. Lee"
+    right:
       - href: notes/index.qmd
         text: "Notes"
 

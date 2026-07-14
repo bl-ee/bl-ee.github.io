@@ -1,0 +1,39 @@
+---
+title: "Formatting Test"
+description: "A temporary note for checking the notes archive and article layout."
+date: 2026-07-14
+---
+
+{{< include /_macros.qmd >}}
+
+## A short calculation
+
+This temporary note is published to check the notes archive, typography,
+table of contents, and mathematical typesetting.
+
+Let $X$ be a square-integrable random variable. Its variance is
+
+$$
+\operatorname{Var}(X) = \E[X^2] - \E[X]^2.
+$$ {#eq-variance}
+
+Equation @eq-variance is nonnegative by the Cauchy--Schwarz inequality.
+
+::: {#thm-expectation-bound}
+
+## Expectation bound
+
+For any $X \in L^2$,
+
+$$
+\abs{\E[X]} \le \sqrt{\E[X^2]}.
+$$
+
+:::
+
+::: {.proof}
+
+Apply Cauchy--Schwarz to the inner product of $X$ and the constant random
+variable $1$.
+
+:::
