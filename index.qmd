@@ -21,7 +21,7 @@ toc: false
       </p>
 
       <p class="contact">
-        You can reach me at bl.ee AT berkeley DOT edu
+        Reach me at bl.ee AT berkeley DOT edu.
       </p>
     </div>
 
