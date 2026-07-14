@@ -61,6 +61,7 @@ body {
 
 .home-page .intro-body {
   min-width: 0;
+  align-self: center;
 }
 
 .home-page .intro-body p {
