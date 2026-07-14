@@ -6,7 +6,6 @@
   --rule: #eeeeee;
   --max-width: 40rem;
   --profile-photo-size: 12.5rem;
-  --home-section-gap: 3.5rem;
 
   --bs-body-color: var(--text);
   --bs-body-font-family: "Times New Roman", Times, serif;
@@ -40,7 +39,7 @@ body {
 .home-page {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: var(--home-section-gap) 1rem 4rem;
+  padding: 4rem 1rem 4rem;
 }
 
 .home-page .intro {
@@ -71,14 +70,14 @@ body {
 .home-page .home-rule {
   display: block;
   width: 100%;
-  margin: var(--home-section-gap) 0 1.5rem;
+  margin: 1.5rem 0 1.5rem;
   border: 0;
   border-top: 1px solid var(--rule);
   opacity: 1;
 }
 
 .home-page h2 {
-  margin: 1.5rem 0 0.75rem;
+  margin: 0.75rem 0 0.75rem;
   font-size: 1.2rem;
 }
 
@@ -127,7 +126,7 @@ a:focus {
 
 .navbar {
   min-height: auto;
-  padding: 0.65rem 0 0.35rem;
+  padding: 0.35rem 0 0.35rem;
   border: 0;
   border-bottom: 1px solid var(--rule);
   box-shadow: none;
