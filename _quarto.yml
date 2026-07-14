@@ -6,6 +6,7 @@ website:
   title: "Brian W. Lee"
   site-url: "https://bl-ee.github.io"
   description: "Brian W. Lee's research homepage and notes."
+  favicon: images/swan.png
 
   navbar:
     title: "Brian W. Lee"
@@ -30,6 +31,7 @@ format:
     anchor-sections: true
     code-copy: true
     code-overflow: wrap
+    crossrefs-hover: false
     grid:
       body-width: 640px
 

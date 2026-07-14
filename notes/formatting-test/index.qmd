@@ -17,7 +17,7 @@ $$
 \operatorname{Var}(X) = \E[X^2] - \E[X]^2.
 $$ {#eq-variance}
 
-Equation @eq-variance is nonnegative by the Cauchy--Schwarz inequality.
+@eq-variance is nonnegative by the Cauchy--Schwarz inequality.
 
 ::: {#thm-expectation-bound}
 

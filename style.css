@@ -39,7 +39,7 @@ body {
 .home-page {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 2.25rem 1rem 4rem;
+  padding: 3rem 1rem 4rem;
 }
 
 .home-page .intro {
@@ -65,6 +65,15 @@ body {
 .home-page .intro-body p {
   margin-top: 0;
   margin-bottom: 1rem;
+}
+
+.home-page .home-rule {
+  display: block;
+  width: calc(100% - var(--profile-photo-size) - 1.5rem);
+  margin: 2.5rem 0 1.5rem;
+  border: 0;
+  border-top: 1px solid var(--rule);
+  opacity: 1;
 }
 
 .home-page h2 {
@@ -202,6 +211,10 @@ main.content h3,
   text-rendering: optimizeLegibility;
 }
 
+.home-page h2 {
+  font-weight: 700;
+}
+
 .quarto-title-block {
   margin-bottom: 2rem;
 }
@@ -259,7 +272,7 @@ mjx-container[display="true"] {
 
 .notes-list {
   margin: 0 0 1.5rem;
-  padding-left: 1.25rem;
+  padding-left: 1.75rem;
 }
 
 .notes-list li {
@@ -267,7 +280,7 @@ mjx-container[display="true"] {
 }
 
 .note-date {
-  color: var(--muted);
+  color: var(--text);
   font-variant-numeric: tabular-nums;
 }
 
@@ -285,7 +298,7 @@ pre {
 
 @media (max-width: 700px) {
   .home-page {
-    padding-top: 1.75rem;
+    padding-top: 2.5rem;
   }
 
   .home-page .intro {
@@ -297,6 +310,10 @@ pre {
     order: -1;
     width: min(65%, 13rem);
     justify-self: center;
+  }
+
+  .home-page .home-rule {
+    width: 100%;
   }
 
   .navbar-container {
