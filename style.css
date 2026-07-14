@@ -6,6 +6,7 @@
   --rule: #eeeeee;
   --max-width: 40rem;
   --profile-photo-size: 12.5rem;
+  --home-section-gap: 3.5rem;
 
   --bs-body-color: var(--text);
   --bs-body-font-family: "Times New Roman", Times, serif;
@@ -39,7 +40,7 @@ body {
 .home-page {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 3rem 1rem 4rem;
+  padding: var(--home-section-gap) 1rem 4rem;
 }
 
 .home-page .intro {
@@ -47,7 +48,7 @@ body {
   grid-template-columns: minmax(0, 1fr) var(--profile-photo-size);
   gap: 1.5rem;
   align-items: start;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0;
 }
 
 .home-page .profile-photo {
@@ -69,8 +70,8 @@ body {
 
 .home-page .home-rule {
   display: block;
-  width: calc(100% - var(--profile-photo-size) - 1.5rem);
-  margin: 2.5rem 0 1.5rem;
+  width: 100%;
+  margin: var(--home-section-gap) 0 1.5rem;
   border: 0;
   border-top: 1px solid var(--rule);
   opacity: 1;
@@ -114,19 +115,19 @@ a:focus {
 .home-page .paper .authors,
 .home-page .paper .venue {
   margin: 0;
-  color: var(--muted);
+  color: var(--text);
 }
 
 .home-page .paper .authors strong {
   font-weight: 600;
-  color: var(--heading);
+  color: var(--text);
 }
 
 /* Quarto shell */
 
 .navbar {
   min-height: auto;
-  padding: 0.65rem 0;
+  padding: 0.65rem 0 0.35rem;
   border: 0;
   border-bottom: 1px solid var(--rule);
   box-shadow: none;
@@ -297,10 +298,6 @@ pre {
 }
 
 @media (max-width: 700px) {
-  .home-page {
-    padding-top: 2.5rem;
-  }
-
   .home-page .intro {
     grid-template-columns: 1fr;
     gap: 1.25rem;
@@ -310,10 +307,6 @@ pre {
     order: -1;
     width: min(65%, 13rem);
     justify-self: center;
-  }
-
-  .home-page .home-rule {
-    width: 100%;
   }
 
   .navbar-container {
