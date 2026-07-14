@@ -197,7 +197,8 @@ a:focus {
   padding: 0;
 }
 
-#quarto-content > main.content {
+#quarto-content > main.content,
+#quarto-content > .home-page {
   padding-top: var(--page-top-gap);
 }
 
