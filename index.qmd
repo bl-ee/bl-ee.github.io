@@ -13,6 +13,9 @@ toc: false
         <a href="https://www.cs.berkeley.edu/~nika/">Nika Haghtalab</a> and
         <a href="https://people.eecs.berkeley.edu/~jordan/">Mike Jordan</a>.
         I like machine learning theory and the foundations of probability.
+      </p>
+
+      <p>
         Before Berkeley, I did my BS and MS at Penn, where I had the privilege of working with
         <a href="https://nikolaimatni.github.io/">Nik Matni</a>.
       </p>
