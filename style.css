@@ -1,5 +1,5 @@
 :root {
-  --text: #555252;
+  --text: #000000;
   --heading: #111111;
   --muted: #777777;
   --link: #284678;
@@ -119,16 +119,25 @@ a:focus {
   min-height: auto;
   padding: 0.65rem 0;
   border: 0;
+  border-bottom: 1px solid var(--rule);
   box-shadow: none;
   background: #ffffff;
 }
 
 .navbar-container {
+  display: flex;
+  flex-wrap: nowrap;
   width: 100%;
   max-width: var(--max-width);
   margin: 0 auto;
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.navbar-brand-container {
+  flex: 0 0 auto;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 
 .navbar-brand {
@@ -141,6 +150,21 @@ a:focus {
 .navbar-brand:focus {
   color: var(--link);
   text-decoration: none;
+}
+
+.navbar-toggler {
+  display: none !important;
+}
+
+.navbar-collapse {
+  display: flex !important;
+  flex-basis: auto;
+  flex-grow: 1;
+}
+
+.navbar-nav {
+  flex-direction: row;
+  margin-left: auto !important;
 }
 
 .navbar-nav .nav-link {

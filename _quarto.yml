@@ -11,6 +11,7 @@ website:
     title: "Brian W. Lee"
     background: white
     foreground: "#777777"
+    collapse: false
     right:
       - href: notes/index.qmd
         text: "Notes"

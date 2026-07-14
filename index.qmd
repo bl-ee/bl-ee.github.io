@@ -33,10 +33,12 @@ toc: false
     <h2>Research</h2>
 
     <article class="paper">
-      <p class="title">Blackwell Approachability and Gradient Equilibrium are Equivalent</p>
-      <p class="authors"><strong>Brian W. Lee</strong>, Nika Haghtalab, Michael I. Jordan, and Ryan J. Tibshirani</p>
-      <p class="venue">
-        COLT 2026 · <a href="https://arxiv.org/abs/2606.27315">arXiv</a> ·
+      <p class="title">
+        <a href="https://arxiv.org/abs/2606.27315">Blackwell Approachability and Gradient Equilibrium are Equivalent</a>
+      </p>
+      <p class="authors">
+        <strong>Brian W. Lee</strong>, Nika Haghtalab, Michael I. Jordan, and Ryan J. Tibshirani ·
+        <span class="publication-venue">COLT 2026</span> ·
         <a href="https://proceedings.mlr.press/v336/lee26c.html">Extended abstract</a>
       </p>
     </article>
