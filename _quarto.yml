@@ -10,8 +10,10 @@ website:
   navbar:
     title: "Brian W. Lee"
     background: white
-    foreground: "#202124"
+    foreground: "#777777"
     right:
+      - href: index.qmd#research
+        text: "Research"
       - href: notes/index.qmd
         text: "Notes"
 
@@ -30,7 +32,7 @@ format:
     code-copy: true
     code-overflow: wrap
     grid:
-      body-width: 700px
+      body-width: 640px
 
 execute:
   freeze: auto

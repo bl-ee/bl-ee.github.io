@@ -23,7 +23,7 @@ function noteDate(value) {
   <% } %>
   <li>
     <span class="note-date"><%= date.short %></span>
-    <span aria-hidden="true">–</span>
+    <span aria-hidden="true">-</span>
     <a href="<%- item.path %>"><%- item.title %></a>
   </li>
 <% } %>
