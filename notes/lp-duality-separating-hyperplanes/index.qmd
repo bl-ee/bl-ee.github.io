@@ -3,9 +3,9 @@ title: "LP Duality from Separating Hyperplanes"
 date: 2026-07-15
 ---
 
-I worked through the following derivation of LP duality to get some intuition
+*I worked through the following derivation of LP duality to get some intuition
 for why admissible e-values for constrained testing problems take a certain
-affine form.
+affine form.*
 
 Consider the primal LP
 $$
