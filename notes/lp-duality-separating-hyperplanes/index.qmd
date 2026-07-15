@@ -1,0 +1,166 @@
+---
+title: "LP Duality from Separating Hyperplanes"
+description: "A derivation of strong LP duality using a supporting hyperplane of the primal value cone."
+date: 2026-07-15
+---
+
+{{< include /_macros.qmd >}}
+
+I worked through the following derivation of LP duality to get some intuition
+for why admissible e-values for constrained testing problems take a certain
+affine form.
+
+Consider the primal LP
+
+$$
+p^\star
+=
+\max \left\{
+  c^\top x
+  :
+  x \geq 0,\;
+  Ax \leq b
+\right\},
+$$
+
+where $A \in \mathbb{R}^{m \times n}$, $b \in \mathbb{R}^m$, and
+$c \in \mathbb{R}^n$. Assume the primal is feasible and that
+$p^\star < \infty$. Then we know the dual is
+
+$$
+\min \left\{
+  b^\top \lambda
+  :
+  \lambda \geq 0,\;
+  A^\top \lambda \geq c
+\right\}.
+$$
+
+Let's derive this dual using a separating hyperplanes argument.
+
+The first insight is to define the closed convex cone in a higher dimension,
+
+$$
+K
+=
+\left\{
+  (u,t) \in \mathbb{R}^m \times \mathbb{R}
+  :
+  \exists x \geq 0,\;
+  Ax \leq u,\;
+  t \leq c^\top x
+\right\}.
+$$
+
+A point $(u,t) \in K$ means that using constraint budget $u$, one can achieve
+objective value at least $t$. To check that $K$ is a closed convex cone:
+
+i.  **$K$ is a cone.** If $(u,t) \in K$ with witness $x$, then for any
+    $\alpha \geq 0$, we have $A(\alpha x) \leq \alpha u$ and
+    $\alpha t \leq c^\top(\alpha x)$.
+
+ii. **$K$ is convex.** If $(u_1,t_1), (u_2,t_2) \in K$ with witnesses
+    $x_1,x_2$, respectively, then for any $\theta \in [0,1]$,
+    $$
+    A\bigl(\theta x_1 + (1-\theta)x_2\bigr)
+    \leq
+    \theta u_1 + (1-\theta)u_2
+    $$
+    and
+    $$
+    \theta t_1 + (1-\theta)t_2
+    \leq
+    c^\top\bigl(\theta x_1 + (1-\theta)x_2\bigr).
+    $$
+
+iii. **$K$ is closed.** This is a little tricky to show, since the definition
+     of $K$ leaves a witness $x$ implicit. We can view $K$ as a projection of
+     a higher-dimensional polyhedral cone:
+     $$
+     K
+     =
+     \operatorname{proj}_{u,t}
+     \left\{
+       (u,t,x)
+       :
+       x \geq 0,\;
+       Ax \leq u,\;
+       t \leq c^\top x
+     \right\}.
+     $$
+     Since the linear image of a polyhedron is a polyhedron, $K$ is a
+     polyhedral cone, hence closed.
+
+The optimal value can be written as
+
+$$
+p^\star = \sup \left\{ t : (b,t) \in K \right\},
+$$
+
+and $(b,p^\star)$ is at the upper boundary of $K$. The second insight is to
+invoke a separating hyperplane argument at this point.
+
+The strong separation result for closed convex cones says that if
+$C \subseteq \mathbb{R}^d$ is a closed convex cone and $y \notin C$, then
+there exists $h \in \mathbb{R}^d$ such that $h^\top z \leq 0$ for all
+$z \in C$ and $h^\top y > 0$. If $C$ is also polyhedral, we have the
+following stronger result: if $z_0 \in C$ and $e \in \mathbb{R}^d$ are such
+that $z_0 + \varepsilon e \notin C$ for all $\varepsilon > 0$, then there
+exists $h \in \mathbb{R}^d$ such that $h^\top z \leq 0$ for all $z \in C$,
+$h^\top z_0 = 0$, and $h^\top e > 0$. That is, the hyperplane
+$\{z : h^\top z = 0\}$ supports $C$ at $z_0$ and separates $C$ from the ray
+$z_0 + \varepsilon e$ with $\varepsilon > 0$.
+
+Now let $z_0 = (b,p^\star) \in \mathbb{R}^{m+1}$ and
+$e = (0,\ldots,0,1) \in \mathbb{R}^{m+1}$. For every $\varepsilon > 0$,
+$z_0 + \varepsilon e \notin K$; otherwise, the definition of $p^\star$ would
+be contradicted. Hence, the polyhedral cone separation result gives a vector
+$h = (r,s) \in \mathbb{R}^m \times \mathbb{R}$ such that
+
+$$
+r^\top u + st \leq 0
+\quad\text{for all } (u,t) \in K,
+\qquad
+r^\top b + sp^\star = 0,
+\qquad
+s > 0.
+$$
+
+Now let $\lambda = -r/s$. Then
+
+$$
+t \leq \lambda^\top u
+\quad\text{for all } (u,t) \in K,
+\qquad
+p^\star = \lambda^\top b.
+$$
+
+This means the hyperplane
+$\{(u,t) : t = \lambda^\top u\}$ with normal vector $(-\lambda,1)$ supports
+$K$ at $(b,p^\star)$.
+
+Notice that $\lambda$ is a dual-feasible solution. First, for any
+$v \in \mathbb{R}^m$ with $v \geq 0$, we have $(v,0) \in K$ since
+$A0 = 0 \leq v$ and $0 \leq c^\top 0 = 0$. By the supporting inequality,
+$0 \leq \lambda^\top v$ must hold, which means $\lambda \geq 0$.
+
+Next, for every $x \geq 0$, $(Ax,c^\top x) \in K$ since $Ax \leq Ax$ and
+$c^\top x \leq c^\top x$. Hence,
+
+$$
+c^\top x \leq \lambda^\top Ax,
+$$
+
+or equivalently,
+
+$$
+(c-A^\top\lambda)^\top x \leq 0.
+$$
+
+Since this holds for all $x \geq 0$, we must have
+$c \leq A^\top \lambda$. Hence, $\lambda \geq 0$ and
+$A^\top \lambda \geq c$, and by the supporting equality,
+$b^\top \lambda = p^\star$.
+
+Combining this with weak duality, which is the easy direction, we conclude
+strong duality.
