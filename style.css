@@ -273,7 +273,8 @@ mjx-container[display="true"] {
 
 .notes-list {
   margin: 0 0 1.5rem;
-  padding-left: 1.75rem;
+  padding-left: 0;
+  list-style: none;
 }
 
 .notes-list li {
